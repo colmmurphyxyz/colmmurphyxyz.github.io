@@ -6,6 +6,7 @@ import Home from './views/Home/Home';
 function App() {
   return (
     <>
+      <div className="bg"></div>
       <Router>
         <Header />
         <Routes>

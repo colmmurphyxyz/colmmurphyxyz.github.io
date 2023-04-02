@@ -2,16 +2,6 @@ p {
     background: "red";
 }
 
-.bg {
-    z-index: -1;
-    width: 100vw;
-    height: 100vh;
-    position: fixed;
-    background: url(../../../public/img/binary-repeat.png);
-    filter: invert(1) brightness(0.4);
-    animation: swipe 120s linear infinite;
-}
-
 main {
     max-width: 75rem;
     margin: 10rem;

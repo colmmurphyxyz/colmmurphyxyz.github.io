@@ -1,7 +1,41 @@
 :root {
-  /* --main-color: #2460A7;
-  --secondary-color: #B3C7D6;
-  --beige: #D9B48F;
-  --light-blue: #85B3D1; */
+  --background-color: #201E1D;
+  --light-gray: #ADADAD;
   font-size: 16px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: white
+}
+
+p {
+  color: var(--light-gray);
+}
+
+.bg {
+  z-index: -1;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  background: url(../public/img/binary-repeat.png);
+  filter: invert(1) brightness(0.4);
+  transform: scale(1.3, 1.3);
+  animation: swipe 120s linear infinite;
+}
+
+@keyframes swipe {
+  0% {
+      background-position: 0% 50%;
+      /* filter: invert(1) brightness(0.4); */
+  }
+
+  50% {
+      background-position: 100% 50%;
+      /* filter: invert(1) brightness(0.4); */
+  }
+
+  100% {
+      background-position: 0% 50%;
+      /* filter: invert(1); */
+  }
 }
