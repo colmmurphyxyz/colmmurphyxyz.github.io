@@ -1,0 +1,42 @@
+header {
+    max-width: min(85%, 75rem);
+    border: 2px solid black;
+    margin: 0 auto;
+    display: grid;
+    grid-template-areas: 
+        "title headshot"
+        "subtitle headshot"
+        "paragraph headshot";
+}
+
+@media only screen and (max-width: 900px) {
+    header {
+        grid-template-areas:
+            "title"
+            "subtitle"
+            "paragraph"
+            "headshot"
+    }
+  }
+
+header > h1 {
+    grid-area: title;
+    /* min-width: 15em; */
+}
+
+header > h2 {
+    grid-area: subtitle;
+}
+
+header > p {
+    grid-area: paragraph;
+}
+
+header > img {
+    grid-area: headshot;
+    border-radius: 50%;
+    max-width: 30rem;
+    max-height: 30rem;
+    padding: 3em;
+    object-fit: contain;
+}
