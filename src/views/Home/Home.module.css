@@ -3,8 +3,8 @@ p {
 }
 
 main {
-    max-width: 75rem;
-    margin: 10rem;
-    border: 2px solid black;
+    max-width: min(85%, 75rem);
     margin: 0 auto;
+    background-color: var(--background-color);
+    /* border: 2px solid black; */
 }
