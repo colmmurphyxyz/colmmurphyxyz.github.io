@@ -28,12 +28,6 @@ header > h1 > strong  {
     font-size: 3rem;
 }
 
-header > p {
-    grid-area: paragraph;
-    margin: 0 auto;
-    max-width: 90%
-}
-
 header > img {
     grid-area: headshot;
     border-radius: 50%;
@@ -42,6 +36,10 @@ header > img {
     /* padding: 3em; */
     margin: 0 auto;
     object-fit: scale-down;
+}
+
+header > ul {
+    color: var(--dark-text-color);
 }
 
 .who {
