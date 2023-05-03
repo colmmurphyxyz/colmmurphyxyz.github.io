@@ -1,8 +1,5 @@
 main {
-    max-width: min(85%, 75rem);
-    margin: 0 auto;
-    padding: 0;
-    background-color: var(--background-color);
+
 }
 
 .quicklinks ul {
@@ -52,10 +49,10 @@ main {
 
 .quicklinks ul li a p {
     text-align: center;
-    color: #333333;
+    color: var(--dark-text-color);
 }
 
 .quicklinks ul li a h3 {
     font-size: 1.7rem;
-    color: #333333;
+    color: var(--dark-text-color);
 }

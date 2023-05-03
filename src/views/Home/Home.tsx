@@ -4,6 +4,11 @@ import "./Home.module.css";
 const Home = (): JSX.Element => {
     return (
         <main>
+            <h2>Contact me</h2>
+            <p>
+                <ul><li>colmmurphy016@gmail.com</li></ul>
+                Send me an email or message me on LinkedIn and I'll respond as soon as I can.
+            </p>
             <div className={styles.quicklinks} >
                 <ul>
                     {quick_links.map((link) => (

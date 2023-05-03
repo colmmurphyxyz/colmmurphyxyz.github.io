@@ -7,12 +7,14 @@ function App() {
   return (
       <>
       <div className="bg"></div>
-      <Router>
-        <Header />
-        <Routes>
-          <Route path="/" element={<Home />} />
-        </Routes>
-      </Router>
+      <div className="content">
+        <Router>
+          <Header />
+          <Routes>
+            <Route path="/" element={<Home />} />
+          </Routes>
+        </Router>
+      </div>
     </>
   );
 }
