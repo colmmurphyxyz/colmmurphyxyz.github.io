@@ -8,10 +8,20 @@ const Header = (): JSX.Element => {
                 <hr />
                 Computer Science Student @ UCC
             </h1>
-            <p>I'm Colm, A Computer Science student from Cork with an interest in just about anything tech related. I have a number of projects over on my Github profile 
-                and I am always working on more.
-            </p>
             <img id={styles.headshot} src="img/headshot.png" alt="My Headshot" />
+            <ul>
+                <li className={styles.who}>
+                    <h3>Who am I?</h3>
+                    <p>I'm a second year Computer Science student at UCC. You can contact me via LinkedIn or my personal email, both of which are linked below.</p>
+                </li>
+                <li className={styles.what}>
+                    <h3>What do I do?</h3>
+                    <p>
+                        I have a keen interest in anything tech related, with an emphasis on cryptography and cybersecurity. It is a dream of mine to work in the cybersecurity 
+                        field when I finish my studies.
+                    </p>
+                </li>
+            </ul>
         </header>
     );
 }

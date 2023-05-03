@@ -2,7 +2,7 @@ header {
     /* max-width: min(85%, 75rem);
     background-color: var(--background-color); */
     margin: 0 auto;
-    padding: 0;
+    padding: 0 2rem;
     display: grid;
     grid-template-areas: 
         "headings headshot"
@@ -13,8 +13,8 @@ header {
     header {
         grid-template-areas:
             "headings"
-            "paragraph"
             "headshot"
+            "paragraph"
     }
   }
 
@@ -22,7 +22,6 @@ header > h1 {
     grid-area: headings;
     min-width: 50%;
     font-size: 1.5rem;
-    padding: 0 2ch;
 }
 
 header > h1 > strong  {
@@ -43,4 +42,12 @@ header > img {
     /* padding: 3em; */
     margin: 0 auto;
     object-fit: scale-down;
+}
+
+.who {
+    list-style: "👨  ";
+}
+
+.what {
+    list-style: "🖥️  ";
 }
