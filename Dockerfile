@@ -10,11 +10,12 @@ RUN npm ci
 # build the app
 RUN npm run build
 
-# set environment to "production"
+# set environment variables
+ENV PORT 3000
 ENV NODE_ENV production
 # expose the port(s) on which the app will run
 EXPOSE 3000
 EXPOSE 80
 
 # start the app
-CMD [ "npx", "serve", "build"]
+CMD [ "node", "server.js" ]
