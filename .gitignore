@@ -2,6 +2,7 @@
 
 *.js
 *.env
+*.pem
 
 # dependencies
 /node_modules
