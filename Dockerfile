@@ -7,8 +7,10 @@ COPY . .
 
 # install dependencies
 RUN npm ci
-# build the app
+# build the React app
 RUN npm run build
+# transpile the Express server
+RUN npx tsc server.ts
 
 # set environment variables
 ENV PORT 3000
