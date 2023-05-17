@@ -1,13 +1,16 @@
 import { Express, Request, Response } from "express";
 const express = require("express");
 const path = require("path");
-import https from "https";
-import fs from "fs";
+const bodyParser = require("body-parser")
+const https = require("https");
+const fs = require("fs");
 
 const app: Express = express();
 
 // Serve the static files from the React app
 app.use(express.static(path.join(__dirname, 'build'), { dotfiles: "allow" } ));
+// to support JSON-encoded bodies
+app.use(bodyParser.json());
 
 // An api endpoint that returns a short list of items
 app.get('/api/getList', (req: Request, res: Response) => {
@@ -17,7 +20,7 @@ app.get('/api/getList', (req: Request, res: Response) => {
 });
 
 // Handles any requests that don't match the ones above
-app.get('*', (req: Request, res: Response) =>{
+app.get('/*', (req: Request, res: Response) =>{
     res.sendFile(path.join(__dirname + 'build/index.html'));
 });
 
