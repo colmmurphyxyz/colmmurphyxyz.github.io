@@ -3,6 +3,7 @@ const express = require("express");
 const path = require("path");
 const bodyParser = require("body-parser")
 const https = require("https");
+const http = require("http");
 const fs = require("fs");
 
 const app: Express = express();
@@ -24,7 +25,20 @@ app.get('/*', (req: Request, res: Response) =>{
     res.sendFile(path.join(__dirname + 'build/index.html'));
 });
 
-const port: number = Number(process.env.PORT) || 3000;
-app.listen(port);
+const port: number = Number(process.env.PORT) || 443;
+// app.listen(port);
+
+http.createServer(app).listen(80, () => {console.log("Listening (http)...")});
+
+https.createServer(
+    {
+        key: fs.readFileSync("/app/build/certs/privkey.pem"),
+	cert: fs.readFileSync("/app/build/certs/cert.pem"),
+	ca: fs.readFileSync("/app/build/certs/chain.pem")
+    },
+    app
+    ).listen(port, () => {
+	console.log("Listening...")
+    });
 
 console.log('App is listening on port ' + port);

@@ -14,10 +14,11 @@ RUN npm run build
 RUN npx tsc server.ts
 
 # set environment variables
-ENV PORT 3000
+ENV PORT 443
 ENV NODE_ENV production
 # expose the port(s) on which the app will run
 EXPOSE 3000
+EXPOSE 443
 EXPOSE 80
 
 # start the app
