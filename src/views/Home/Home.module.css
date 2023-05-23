@@ -13,7 +13,7 @@ main {
 
 .quicklinks ul li {
     width: 330px;
-    height: 130px;
+    height: 160px;
     border: 2px solid rgba(0,0,0, .9);
     border-radius: 5px;
     margin: 23px 30px;
@@ -27,6 +27,8 @@ main {
 
 .quicklinks ul li a {
     text-decoration: none;
+    width: 100%;
+    height: 100%
 }
 
 .quicklinks ul li a * {
@@ -42,7 +44,6 @@ main {
     height: 35px;
     width: 35px;
     margin: 0 6px 0 2px;
-    background: #444;
     padding: 8px;
     border-radius: 8%;
 }

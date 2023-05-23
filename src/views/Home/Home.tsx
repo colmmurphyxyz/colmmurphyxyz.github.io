@@ -9,11 +9,11 @@ const Home = (): JSX.Element => {
                     {quick_links.map((link) => (
                     <li key={link.title}>
                         <a href={link.url} target="_blank">
-                        <div className={styles.quicklinkheader}>
-                            <img src={link.icon ? link.icon : `https://${new URL(link.url).hostname}/favicon.ico`} alt={link.title} />
-                            <h3>{link.title}</h3>
-                        </div>
-                        <p>{link.description}</p>
+                            <div className={styles.quicklinkheader}>
+                                <img src={link.icon ? link.icon : `https://${new URL(link.url).hostname}/favicon.ico`} alt={link.title} />
+                                <h3>{link.title}</h3>
+                            </div>
+                            <p>{link.description}</p>
                         </a>
                     </li>
                     ))}
