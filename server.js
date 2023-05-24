@@ -7,7 +7,8 @@ var https = require("https");
 var http = require("http");
 var fs = require("fs");
 
-var app = express();
+const httpApp = express();
+const app = express();
 
 // Serve the static files from the React app
 app.use(express.static(path.join(__dirname, 'build'), { dotfiles: "allow" }));
@@ -16,14 +17,21 @@ app.use(express.static(path.join(__dirname, 'build'), { dotfiles: "allow" }));
 app.use(bodyParser.json());
 
 // Handles any requests that don't match the ones above
-app.get('/*', function (req, res) {
+app.get('*', function (req, res) {
+    console.log("incoming");
     res.sendFile(path.join(__dirname, 'build/index.html'));
 });
 
-var port = Number(process.env.PORT) || 443;
-http.createServer(app).listen(80, () => {
+httpApp.set("port", 80);
+httpApp.get("*", (req, res) => {
+    res.redirect("https://" + req.headers.host + "/" + req.path);
+});
+http.createServer(httpApp).listen(httpApp.get("port"), () => {
     console.log("Listening (http)..."); 
 });
+
+var port = Number(process.env.PORT) || 443;
+
 https.createServer({
     key: fs.readFileSync(path.join(__dirname, "build/certs/privkey.pem")),
     cert: fs.readFileSync(path.join(__dirname, "build/certs/cert.pem")),
