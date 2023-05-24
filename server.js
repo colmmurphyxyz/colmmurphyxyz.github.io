@@ -25,9 +25,9 @@ http.createServer(app).listen(80, () => {
     console.log("Listening (http)..."); 
 });
 https.createServer({
-    key: fs.readFileSync("/app/build/certs/privkey.pem"),
-    cert: fs.readFileSync("/app/build/certs/cert.pem"),
-    ca: fs.readFileSync("/app/build/certs/chain.pem")
+    key: fs.readFileSync(path.join(__dirname, "build/certs/privkey.pem")),
+    cert: fs.readFileSync(path.join(__dirname, "build/certs/cert.pem")),
+    ca: fs.readFileSync(path.join(__dirname, "build/certs/chain.pem"))
 }, app).listen(port, () =>  {
     console.log("Listening...");
 });
