@@ -10,8 +10,6 @@ RUN apk add certbot
 RUN npm ci
 # build the React app
 RUN npm run build
-# transpile the Express server
-RUN npx tsc server.ts
 
 # set environment variables
 ENV PORT 443
