@@ -46,7 +46,7 @@ const quick_links: { icon?: string, title: string, description: string, url: str
         icon: "/img/docs.svg",
         title: "My CV",
         description: "Download a copy of my CV",
-        url: "colm_murphy_cv.pdf"
+        url: "Murphy_Colm_BscComputerScience.pdf"
     }
 ]
 
