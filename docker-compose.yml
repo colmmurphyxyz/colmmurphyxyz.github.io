@@ -1,0 +1,11 @@
+version: '3'
+services:
+  node:
+    image: node:1.16-alpine
+    ports:
+      - "80:80"
+      - "433:433"
+      - "8080:8080"
+  certbot:
+    image: certbot/certbot
+
