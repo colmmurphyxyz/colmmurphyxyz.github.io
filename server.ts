@@ -1,10 +1,10 @@
 import { Express, Request, Response } from "express";
-const express = require("express");
-const path = require("path");
-const bodyParser = require("body-parser")
-const https = require("https");
-const http = require("http");
-const fs = require("fs");
+import express from "express";
+import path from "path";
+import bodyParser from "body-parser";
+import https from "https";
+import http from "http";
+import fs from "fs";
 
 const app: Express = express();
 
