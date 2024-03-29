@@ -19,7 +19,6 @@ app.get('/*', (req: Request, res: Response) =>{
 });
 
 const port: number = Number(process.env.PORT) || 443;
-// app.listen(port);
 
 http.createServer(app).listen(80, () => {console.log("Listening (http)...")});
 
