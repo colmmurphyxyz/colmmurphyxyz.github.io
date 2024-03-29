@@ -4,8 +4,6 @@ FROM node:16-alpine
 WORKDIR /app
 # copy app files into working dir
 COPY . .
-# install certbot
-RUN apk add certbot
 # install dependencies
 RUN npm ci
 # build the React app
