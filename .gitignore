@@ -2,6 +2,7 @@
 
 *.env
 *.pem
+/public/certs
 
 # dependencies
 /node_modules
