@@ -11,7 +11,7 @@ export type QuickLinkProps = {
 
 export const QuickLink: React.FC<QuickLinkProps> = ({ icon, title, description, url }) => {
     return (
-        <li key={title}>
+        <li key={title} className={styles.quicklink}>
             <a href={url}>
                 <div className={styles.quicklinkheader}>
                     <img src={icon || `https://${new URL(url).hostname}/favicon.ico`} alt={title} />

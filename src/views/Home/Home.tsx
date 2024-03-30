@@ -41,9 +41,19 @@ const Home = (): JSX.Element => {
                         ))}
                     </ul>
                 </div>
-                <h2>
-                    Portfolio
-                </h2>
+                <section id={styles.portfolio}>
+                    <h2>Portfolio</h2>
+                    <article id={styles.personalwebsite}>
+                        <h3>ReactJS website</h3>
+                        <img src="img/webpage.png" />
+                        <ul>
+                            <li>Created using ReactJS</li>
+                            <li>Hosted on GitHub Pages</li>
+                            <li>Continuous Integration with GitHub Actions</li>
+                        </ul>
+                    </article>
+                    
+                </section>
             </main>
         </>
     );
