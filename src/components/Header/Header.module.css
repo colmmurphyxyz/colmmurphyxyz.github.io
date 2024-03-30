@@ -5,27 +5,31 @@ header {
     padding: 0 2rem;
     display: grid;
     grid-template-areas: 
-        "headings headshot"
-        "paragraph headshot";
+        "heading headshot"
+        "subheading headshot";
 }
 
 @media only screen and (max-width: 900px) {
     header {
         grid-template-areas:
-            "headings"
+            "heading"
+            "subheading"
             "headshot"
-            "paragraph"
     }
   }
 
 header > h1 {
-    grid-area: headings;
+    grid-area: heading;
     min-width: 50%;
-    font-size: 1.5rem;
+    font-size: 3rem;
 }
 
-header > h1 > strong  {
-    font-size: 3rem;
+header > p  {
+    font-size: 1.25rem;
+}
+
+header > p > br {
+    padding-top: 16px;
 }
 
 header > img {
@@ -36,20 +40,4 @@ header > img {
     /* padding: 3em; */
     margin: 0 auto;
     object-fit: scale-down;
-}
-
-header > ul {
-    color: var(--dark-text-color);
-}
-
-.who {
-    list-style: "👨  ";
-}
-
-.what {
-    list-style: "🖥️  ";
-}
-
-.hireMe {
-    list-style: "💼 "
 }
