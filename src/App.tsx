@@ -1,6 +1,7 @@
 import './App.css';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Home from './views/Home/Home';
+import { Footer } from "./components/Footer/Footer";
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
             <Route path="/" element={<Home />} />
           </Routes>
         </Router>
+        <Footer />
       </div>
     </>
   );
