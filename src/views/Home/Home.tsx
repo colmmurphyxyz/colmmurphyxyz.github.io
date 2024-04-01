@@ -1,5 +1,6 @@
 import Header from "../../components/Header/Header";
 import { QuickLink, QuickLinkProps } from "../../components/QuickLink/QuickLink";
+import PortfolioWebsite from "../../components/PortfolioWebsite/PortfolioWebsite";
 import styles from "./Home.module.css";
 import "./Home.module.css";
 
@@ -43,16 +44,8 @@ const Home = (): JSX.Element => {
                 </div>
                 <section id={styles.portfolio}>
                     <h2>Portfolio</h2>
-                    <article id={styles.personalwebsite}>
-                        <h3>ReactJS website</h3>
-                        <img src="img/webpage.png" />
-                        <ul>
-                            <li>Created using ReactJS</li>
-                            <li>Hosted on GitHub Pages</li>
-                            <li>Continuous Integration with GitHub Actions</li>
-                        </ul>
-                    </article>
-                    
+                    <hr />
+                    <PortfolioWebsite />
                 </section>
             </main>
         </>

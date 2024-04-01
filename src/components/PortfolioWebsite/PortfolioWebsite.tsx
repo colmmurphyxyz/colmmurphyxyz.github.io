@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
+import Card from "@mui/material/Card";
 import styles from "./PortfolioWebsite.module.css";
 import "./PortfolioWebsite.module.css";
+import { Button, CardActions, CardContent, CardMedia, Typography } from "@mui/material";
 
 const PortfolioWebsite: React.FC = () => {
 
@@ -10,13 +12,16 @@ const PortfolioWebsite: React.FC = () => {
         return (
             <>
                 <ul>
-                    <li>Created using ReactJS</li>
+                    <li>Created using React, Express and Typescript</li>
                     <li>Hosted on GitHub Pages</li>
                     <li>Continuous Integration with GitHub Actions</li>
-                    <li>Pretty cool imo</li>
-                    <li><strong>It even runs Doom</strong></li>
+                    <li> <br /> </li>
+                    <li>Typescript</li>
+                    <li>React</li>
+                    <li>Express</li>
+                    <li>GitHub Actions / CI</li>
                 </ul>
-                <button onClick={() => setInDoomMode(true)}>Enter Doom Mode</button>
+                {/* <button onClick={() => setInDoomMode(true)}>Enter Doom Mode</button> */}
             </>
         );
     };
