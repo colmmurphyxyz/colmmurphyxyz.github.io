@@ -10,3 +10,27 @@ main {
     list-style-type: none;
     padding: 0;
 }
+
+.card {
+    background-color: var(--light-bg-color);
+    border-radius: 0.5rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    margin: 1rem;
+    max-width: 400px;
+
+}
+
+.card li, .card p, .card h3 {
+    color: var(--dark-text-color);
+}
+
+.projectsgrid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.projectsgrid > div {
+    padding: 1rem;
+}

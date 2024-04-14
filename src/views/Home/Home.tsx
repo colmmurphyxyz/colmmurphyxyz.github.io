@@ -3,6 +3,7 @@ import { QuickLink, QuickLinkProps } from "../../components/QuickLink/QuickLink"
 import PortfolioWebsite from "../../components/PortfolioWebsite/PortfolioWebsite";
 import styles from "./Home.module.css";
 import "./Home.module.css";
+import { Button, Card, CardActions, CardContent, CardMedia, List, ListItem, ListItemIcon, ListItemText, Typography } from "@mui/material";
 
 const Home = (): JSX.Element => {
     const quick_links: QuickLinkProps[] = [
@@ -43,9 +44,61 @@ const Home = (): JSX.Element => {
                     </ul>
                 </div>
                 <section id={styles.portfolio}>
-                    <h2>Portfolio</h2>
-                    <hr />
-                    <PortfolioWebsite />
+                    <h2>Projects I've worked on</h2>
+                    <div className={styles.projectsgrid}>
+                        <Card className={styles.card}>
+                            <CardMedia sx={{ height: 240 }}image="/img/react.svg" title="My personal webpage" />
+                            <CardContent>
+                                <Typography>
+                                    <h3>Personal Website</h3>
+                                </Typography>
+                                <List>
+                                    <ListItem>
+                                        <ListItemIcon>•</ListItemIcon>
+                                        <ListItemText>Created using React, Typescript and ExpressJS</ListItemText>
+                                    </ListItem>
+                                    <ListItem>
+                                        <ListItemIcon>•</ListItemIcon>
+                                        <ListItemText>Hosted on GitHub Pages</ListItemText>
+                                    </ListItem>
+                                    <ListItem>
+                                        <ListItemIcon>•</ListItemIcon>
+                                        <ListItemText>Continuous Integration with GitHub Actions</ListItemText>
+                                    </ListItem>
+                                </List>
+                            </CardContent>
+                            <CardActions>
+                                <Button>Share</Button>
+                                <Button>See Source</Button>
+                            </CardActions>
+                        </Card>
+                        <Card className={styles.card}>
+                            <CardMedia sx={{ height: 240 }} image="/img/sandsoforisis.png" title="Sands Of Orisis" />
+                            <CardContent>
+                                <Typography>
+                                    <h3>Sands Of Orisis</h3>
+                                </Typography>
+                                <List>
+                                    <ListItem>
+                                        <ListItemIcon>•</ListItemIcon>
+                                        <ListItemText>2D, top-down RTS game with Godot 4</ListItemText>
+                                    </ListItem>
+                                    <ListItem>
+                                        <ListItemIcon>•</ListItemIcon>
+                                        <ListItemText>Real-time multiplayer networking</ListItemText>
+                                    </ListItem>
+                                    <ListItem>
+                                        <ListItemIcon>•</ListItemIcon>
+                                        <ListItemText>sick ass animations</ListItemText>
+                                    </ListItem>
+                                </List>
+                            </CardContent>
+                            <CardActions>
+                                <Button>Share</Button>
+                                <Button>See Source</Button>
+                            </CardActions>
+                        </Card>
+                    </div>
                 </section>
             </main>
         </>
