@@ -3,6 +3,7 @@ import { QuickLink, QuickLinkProps } from "../../components/QuickLink/QuickLink"
 import styles from "./Home.module.css";
 import "./Home.module.css";
 import { Button, Card, CardActions, CardContent, CardMedia, List, ListItem, ListItemIcon, ListItemText, Typography } from "@mui/material";
+import GitHubIcon from '@mui/icons-material/GitHub';
 
 const Home = (): JSX.Element => {
     const quick_links: QuickLinkProps[] = [
@@ -67,8 +68,12 @@ const Home = (): JSX.Element => {
                                 </List>
                             </CardContent>
                             <CardActions>
-                                <Button>Share</Button>
-                                <Button>See Source</Button>
+                                <Button 
+                                    variant="contained"
+                                    href="https://github.com/colmmurphyxyz/colmmurphyxyz.github.io"
+                                    startIcon={<GitHubIcon />}>
+                                        See Source
+                                </Button>
                             </CardActions>
                         </Card>
                         <Card className={styles.card}>
@@ -93,8 +98,12 @@ const Home = (): JSX.Element => {
                                 </List>
                             </CardContent>
                             <CardActions>
-                                <Button>Share</Button>
-                                <Button>See Source</Button>
+                                <Button 
+                                    variant="contained"
+                                    href="https://github.com/colmmurphyxyz/CS3305-2024-Team-2"
+                                    startIcon={<GitHubIcon />}>
+                                        See Source
+                                </Button>
                             </CardActions>
                         </Card>
                     </div>
