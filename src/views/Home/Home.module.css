@@ -11,6 +11,10 @@ main {
     padding: 0;
 }
 
+.projectsGrid {
+    justify-content: center;
+}
+
 .card li,
 .card p,
 .card h4 {
