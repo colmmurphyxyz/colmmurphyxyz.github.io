@@ -46,7 +46,7 @@ const Home = (): JSX.Element => {
                     <h2>Projects I've worked on</h2>
                     <div className={styles.projectsgrid}>
                         <Card className={styles.card}>
-                            <CardMedia sx={{ height: 240 }}image="/img/react.svg" title="My personal webpage" />
+                            <CardMedia sx={{ height: 240 }}image="./img/react.svg" title="My personal webpage" />
                             <CardContent>
                                 <Typography>
                                     <h3>Personal Website</h3>
@@ -72,7 +72,7 @@ const Home = (): JSX.Element => {
                             </CardActions>
                         </Card>
                         <Card className={styles.card}>
-                            <CardMedia sx={{ height: 240 }} image="/img/sandsoforisis.png" title="Sands Of Orisis" />
+                            <CardMedia sx={{ height: 240 }} image="./img/sandsoforisis.png" title="Sands Of Orisis" />
                             <CardContent>
                                 <Typography>
                                     <h3>Sands Of Orisis</h3>
