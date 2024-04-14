@@ -2,7 +2,7 @@ import Header from "../../components/Header/Header";
 import { QuickLink, QuickLinkProps } from "../../components/QuickLink/QuickLink";
 import styles from "./Home.module.css";
 import "./Home.module.css";
-import { Button, Card, CardActions, CardContent, CardMedia, List, ListItem, ListItemIcon, ListItemText, Typography } from "@mui/material";
+import { Button, Card, CardActions, CardContent, CardMedia, Grid, List, ListItem, ListItemIcon, ListItemText, Typography } from "@mui/material";
 import GitHubIcon from '@mui/icons-material/GitHub';
 
 const Home = (): JSX.Element => {
@@ -39,19 +39,20 @@ const Home = (): JSX.Element => {
                 <div className={styles.quicklinks}>
                     <ul>
                         {quick_links.map((link) => (
-                            <QuickLink {...link} />
+                            <QuickLink {...link} key={link.title} />
                         ))}
                     </ul>
                 </div>
                 <section id={styles.portfolio}>
                     <h2 style={{ textAlign: "center" }}>Projects I've worked on</h2>
-                    <hr />
-                    <div className={styles.projectsgrid}>
-                        <Card className={styles.card}>
-                            <CardMedia sx={{ height: 240 }}image="./img/react.svg" title="My personal webpage" />
+                    {/* <hr /> */}
+
+                    <Grid container className={styles.projectsGrid}>
+                        <Grid item component={Card} className={styles.card} key={1} xs>
+                            <CardMedia image="./img/react.svg" title="React logo" className={styles.cardMedia} />
                             <CardContent>
-                                <Typography>
-                                    <h3>Personal Website</h3>
+                                <Typography variant="h4">
+                                    Personal Website
                                 </Typography>
                                 <List>
                                     <ListItem>
@@ -68,20 +69,21 @@ const Home = (): JSX.Element => {
                                     </ListItem>
                                 </List>
                             </CardContent>
-                            <CardActions>
-                                <Button 
+                            <CardActions className={styles.cardActions}>
+                                <Button
+                                    className={styles.cardActions}
                                     variant="contained"
                                     href="https://github.com/colmmurphyxyz/colmmurphyxyz.github.io"
                                     startIcon={<GitHubIcon />}>
-                                        See Source
+                                    See Source
                                 </Button>
                             </CardActions>
-                        </Card>
-                        <Card className={styles.card}>
-                            <CardMedia sx={{ height: 240 }} image="./img/sandsoforisis.png" title="Sands Of Orisis" />
+                        </Grid>
+                        <Grid item component={Card} className={styles.card} key={2} xs>
+                            <CardMedia image="./img/sandsoforisis.png" title="Sands Of Orisis" className={styles.cardMedia} />
                             <CardContent>
-                                <Typography>
-                                    <h3>Sands Of Orisis</h3>
+                                <Typography variant="h4">
+                                    Sands Of Orisis
                                 </Typography>
                                 <List>
                                     <ListItem>
@@ -94,16 +96,59 @@ const Home = (): JSX.Element => {
                                     </ListItem>
                                 </List>
                             </CardContent>
-                            <CardActions>
-                                <Button 
+                            <CardActions className={styles.cardActions}>
+                                <Button
+                                    className={styles.cardActions}
                                     variant="contained"
                                     href="https://github.com/colmmurphyxyz/CS3305-2024-Team-2"
                                     startIcon={<GitHubIcon />}>
-                                        See Source
+                                    See Source
                                 </Button>
                             </CardActions>
-                        </Card>
-                    </div>
+                        </Grid>
+                        <Grid item component={Card} className={styles.card} key={2} xs>
+                            <CardMedia image="./img/klaassify_screenshot.png" title="Klaassify" className={styles.cardMedia} />
+                            <CardContent>
+                                <Typography variant="h4">
+                                    Klaassify
+                                </Typography>
+                                <List>
+                                    <ListItem>
+                                        <ListItemIcon>•</ListItemIcon>
+                                        <ListItemText>JavaFX & ExpressJS application to visualise your music taste</ListItemText>
+                                    </ListItem>
+                                    <ListItem>
+                                        <ListItemIcon>•</ListItemIcon>
+                                        <ListItemText>Integrates with the Spotify API to retrieve your favourite artists</ListItemText>
+                                    </ListItem>
+                                    <ListItem>
+                                        <ListItemIcon>•</ListItemIcon>
+                                        <ListItemText>Represents these artists as vertices in a graph, with similar artists connected with an edge</ListItemText>
+                                    </ListItem>
+                                    <ListItem>
+                                        <ListItemIcon>•</ListItemIcon>
+                                        <ListItemText>Utilises a force simulation algorithm to render the graph on a 2D canvas</ListItemText>
+                                    </ListItem>
+                                </List>
+                            </CardContent>
+                            <CardActions className={styles.cardActions}>
+                                <Button
+                                    className={styles.cardActions}
+                                    variant="contained"
+                                    href="https://github.com/benshorten72/cs3500-team36-server"
+                                    startIcon={<GitHubIcon />}>
+                                    Server
+                                </Button>
+                                <Button
+                                    className={styles.cardActions}
+                                    variant="contained"
+                                    href="https://github.com/colmmurphyxyz/cs3500-team36-client"
+                                    startIcon={<GitHubIcon />}>
+                                    Client
+                                </Button>
+                            </CardActions>
+                        </Grid>
+                    </Grid>
                 </section>
             </main>
         </>
