@@ -8,7 +8,7 @@ const Header = (): JSX.Element => {
                 <strong>Colm Murphy</strong> <br />
             </h1>
             <p>
-                <hr />
+                {/* <hr /> */}
                 BSc Computer Science Student @ UCC <br /><br />
                 Software Development Intern @ Pilz Ireland
             </p>
