@@ -44,7 +44,8 @@ const Home = (): JSX.Element => {
                     </ul>
                 </div>
                 <section id={styles.portfolio}>
-                    <h2>Projects I've worked on</h2>
+                    <h2 style={{ textAlign: "center" }}>Projects I've worked on</h2>
+                    <hr />
                     <div className={styles.projectsgrid}>
                         <Card className={styles.card}>
                             <CardMedia sx={{ height: 240 }}image="./img/react.svg" title="My personal webpage" />
@@ -90,10 +91,6 @@ const Home = (): JSX.Element => {
                                     <ListItem>
                                         <ListItemIcon>•</ListItemIcon>
                                         <ListItemText>Real-time multiplayer networking</ListItemText>
-                                    </ListItem>
-                                    <ListItem>
-                                        <ListItemIcon>•</ListItemIcon>
-                                        <ListItemText>sick ass animations</ListItemText>
                                     </ListItem>
                                 </List>
                             </CardContent>
