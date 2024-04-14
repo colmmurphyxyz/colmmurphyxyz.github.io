@@ -1,6 +1,5 @@
 import Header from "../../components/Header/Header";
 import { QuickLink, QuickLinkProps } from "../../components/QuickLink/QuickLink";
-import PortfolioWebsite from "../../components/PortfolioWebsite/PortfolioWebsite";
 import styles from "./Home.module.css";
 import "./Home.module.css";
 import { Button, Card, CardActions, CardContent, CardMedia, List, ListItem, ListItemIcon, ListItemText, Typography } from "@mui/material";
