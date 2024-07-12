@@ -1,0 +1,24 @@
+.projectCardButton {
+    background-color: var(--button-background-color);
+    border-radius: 12px;
+}
+
+.projectCardButton > a {
+    height: 100%;
+    margin: 0.5em;
+    display: flex;
+    align-items: center;
+    text-decoration: none; /* Hide text underline */
+    font-weight: 600; /* bold */
+}
+
+.projectCardButton img {
+    width: 1.3em;
+    height: 1.3em;
+    filter: invert(100%);
+}
+
+.projectCardButton > a > p {
+    color: var(--light-text-color);
+    padding: 1px 0.5em;
+}

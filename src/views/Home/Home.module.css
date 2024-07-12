@@ -11,7 +11,10 @@ main {
     padding: 0;
 }
 
-.projectsGrid {
+/* .projectsGrid {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
     justify-content: center;
 }
 
@@ -23,10 +26,9 @@ main {
 
 .card {
     margin: 16px !important;
-    display: flex !important;
-    flex-direction: column !important;
-    justify-content: flex-start !important;
-    min-width: 450px;
+    /* display: flex !important;
+    flex-direction: row !important;
+    justify-content: flex-start !important; 
     max-width: 600px !important;
 }
 
@@ -37,3 +39,4 @@ main {
 .cardActions {
     margin-top: auto !important;
 }
+    */

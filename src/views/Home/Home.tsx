@@ -4,6 +4,7 @@ import styles from "./Home.module.css";
 import "./Home.module.css";
 import { Button, Card, CardActions, CardContent, CardMedia, Grid, List, ListItem, ListItemIcon, ListItemText, Typography } from "@mui/material";
 import GitHubIcon from '@mui/icons-material/GitHub';
+import ProjectsCardsList from "../../components/ProjectsCardsList/ProjectsCardsList";
 
 const Home = (): JSX.Element => {
     const quick_links: QuickLinkProps[] = [
@@ -45,9 +46,11 @@ const Home = (): JSX.Element => {
                 </div>
                 <section id={styles.portfolio}>
                     <h2 style={{ textAlign: "center" }}>Projects I've worked on</h2>
-                    {/* <hr /> */}
+                    <hr />
 
-                    <Grid container className={styles.projectsGrid}>
+                    <ProjectsCardsList />
+                        
+                    {/* <Grid container className={styles.projectsGrid}>
                         <Grid item component={Card} className={styles.card} key={1} xs>
                             <CardMedia image="./img/react.svg" title="React logo" className={styles.cardMedia} />
                             <CardContent>
@@ -148,7 +151,7 @@ const Home = (): JSX.Element => {
                                 </Button>
                             </CardActions>
                         </Grid>
-                    </Grid>
+                    </Grid> */}
                 </section>
             </main>
         </>

@@ -1,0 +1,22 @@
+.projectCard {
+    background-color: var(--light-text-color);
+    border-radius: 12px;
+}
+.projectCard > img {
+    width: 100%;
+    object-fit: contain;
+    border-radius: 12px 12px 0 0;
+}
+
+.projectCard p, .projectCard h3, .projectCard li {
+    color: var(--dark-text-color);
+}
+
+#projectCardActions {
+    list-style-type: none;
+    display: flex;
+}
+
+#projectCardActions > * {
+    padding: 0 1em;
+}
