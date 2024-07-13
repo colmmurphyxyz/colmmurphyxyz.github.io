@@ -28,7 +28,7 @@ p, li, a {
 }
 
 .content {
-  max-width: min(95%, 75rem);
+  max-width: 95vw;
   background-color: var(--background-color);
   margin: 0 auto;
 }

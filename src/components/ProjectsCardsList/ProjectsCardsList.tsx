@@ -79,7 +79,6 @@ const ProjectsCardsList = (): JSX.Element => {
         
     ]
     return (
-        <>
         <div id={styles.projectsList}>
         {
             cards.map((card, index) =>
@@ -97,7 +96,6 @@ const ProjectsCardsList = (): JSX.Element => {
             )
         }
         </div>
-        </>
     )
 }
 

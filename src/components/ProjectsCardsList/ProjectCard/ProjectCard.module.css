@@ -38,7 +38,6 @@
 
 .projectCard > img {
     grid-area: gridImage;
-    min-width: 440px;
     max-width: 100%;
     height: 100%;
     object-fit: cover;
@@ -67,6 +66,8 @@
 #projectCardActions {
     grid-area: gridActions;
     list-style-type: none;
+    padding-left: 0;
+    padding-right: 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-end;
@@ -78,4 +79,10 @@
 
 #projectCardActions > * {
     padding: 0.5em;
+}
+
+@media only screen and (max-width: 600px) {
+    #projectCardActions > * {
+        width: 100%;
+    }
 }
