@@ -7,15 +7,17 @@ export type ProjectCardProps = {
     description: string;
     bulletPoints: string[];
     actions: ProjectCardButtonProps[];
+    invertColumns?: boolean,
 }
 
-export const ProjectCard: React.FC<ProjectCardProps> = ({imageUrl, title, description, bulletPoints, actions}) => {
+export const ProjectCard: React.FC<ProjectCardProps> = ({imageUrl, title, description, bulletPoints, actions, invertColumns}) => {
     return (
     <>
-        <div className={styles.projectCard}>
+        <div className={styles.projectCard + (invertColumns ? ' ' + styles.columnsInverted : '')}>
             <img src={imageUrl} alt=""/>
-            <h3> {description} </h3>
-            <ul>
+            <h3> {title} </h3>
+            <p> {description}</p>
+            <ul id={styles.cardDescription}>
                 {
                     bulletPoints.map(point => 
                         <li>
