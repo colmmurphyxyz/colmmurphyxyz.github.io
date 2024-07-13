@@ -35,9 +35,20 @@ header > p > br {
 header > img {
     grid-area: headshot;
     border-radius: 50%;
-    max-width: min(20rem, 100%);
-    max-height: min(20rem, 100%);
+    width: min(20rem, 100%);
+    height: min(20rem, 100%);
     /* padding: 3em; */
     margin: 0 auto;
     object-fit: scale-down;
+    /* Loading shimmer */
+    background: linear-gradient(-45deg, #eee 40%, #fafafa 50%, #eee 60%);
+    background-size: 300%;
+    background-position-x: 100%;
+    animation: shimmer 1s infinite ease-in-out;
+}
+
+@keyframes shimmer {
+    to {
+        background-position-x: 0%;
+    }
 }
