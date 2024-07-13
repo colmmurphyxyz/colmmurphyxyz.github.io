@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="916" height="829" version="1.1">
+  <defs>
+    <!-- Define the gradient -->
+    <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="-50%" stop-color="eeeeee" />
+      <stop offset="0%" stop-color="#f6f7f8" />
+      <stop offset="50%" stop-color="#eeeeee" />
+      <stop offset="100%" stop-color="f6f7f8" />
+      <stop offset="150%" stop-color="eeeeee" />
+    </linearGradient>
+    
+    <!-- Define the mask -->
+    <mask id="shimmer-mask">
+      <!-- <rect width="916" height="829" fill="#201e1d" /> -->
+      <rect width="916" height="829" fill="url(#gradient)" />
+    </mask>
+  </defs>
+
+  <!-- Rectangle with the shimmer effect -->
+  <rect width="916" height="829" style="fill:#808080;" mask="url(#shimmer-mask)">
+  </rect>
+</svg>
