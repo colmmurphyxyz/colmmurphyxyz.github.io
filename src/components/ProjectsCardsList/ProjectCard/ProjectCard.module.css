@@ -1,0 +1,88 @@
+.projectCard {
+    display: grid;
+    grid-template-areas:
+    "gridImage gridTitle"
+    "gridImage gridDescription"
+    "gridImage gridPoints"
+    "gridImage gridActions";
+    min-width: 100%;
+}
+
+.columnsInverted {
+    grid-template-areas:
+    "gridTitle       gridImage "
+    "gridDescription gridImage "
+    "gridPoints      gridImage "
+    "gridActions     gridImage ";
+}
+
+@media only screen and (max-width: 1000px) {
+    .projectCard {
+        grid-template-areas:
+            "gridTitle"
+            "gridImage"
+            "gridDescription"
+            "gridPoints"
+            "gridActions"
+    }
+
+    .columnsInverted {
+        grid-template-areas:
+            "gridTitle"
+            "gridImage"
+            "gridDescription"
+            "gridPoints"
+            "gridActions"
+    }
+}
+
+.projectCard > img {
+    grid-area: gridImage;
+    max-width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.projectCard > h3 {
+    grid-area: gridTitle;
+    text-align: center;
+}
+
+.projectCard > p {
+    grid-area: gridDescription;
+    padding: 1em;
+}
+
+#cardDescription {
+    grid-area: gridPoints;
+    color: var(--dark-text-color);
+}
+
+#cardDescription > li {
+    padding: 0.5em 0;
+}
+
+#projectCardActions {
+    grid-area: gridActions;
+    list-style-type: none;
+    padding-left: 0;
+    padding-right: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.columnsInverted #projectCardActions {
+    justify-content: flex-start;
+}
+
+#projectCardActions > * {
+    padding: 0.5em;
+}
+
+@media only screen and (max-width: 600px) {
+    #projectCardActions > * {
+        width: 100%;
+    }
+}
