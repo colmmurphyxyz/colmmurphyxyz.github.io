@@ -5,6 +5,7 @@
     "gridImage gridDescription"
     "gridImage gridPoints"
     "gridImage gridActions";
+    min-width: 100%;
 }
 
 .columnsInverted {
@@ -13,6 +14,26 @@
     "gridDescription gridImage "
     "gridPoints      gridImage "
     "gridActions     gridImage ";
+}
+
+@media only screen and (max-width: 1000px) {
+    .projectCard {
+        grid-template-areas:
+            "gridTitle"
+            "gridImage"
+            "gridDescription"
+            "gridPoints"
+            "gridActions"
+    }
+
+    .columnsInverted {
+        grid-template-areas:
+            "gridTitle"
+            "gridImage"
+            "gridDescription"
+            "gridPoints"
+            "gridActions"
+    }
 }
 
 .projectCard > img {
