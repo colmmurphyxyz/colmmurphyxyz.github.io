@@ -2,8 +2,6 @@ import Header from "../../components/Header/Header";
 import { QuickLink, QuickLinkProps } from "../../components/QuickLink/QuickLink";
 import styles from "./Home.module.css";
 import "./Home.module.css";
-import { Button, Card, CardActions, CardContent, CardMedia, Grid, List, ListItem, ListItemIcon, ListItemText, Typography } from "@mui/material";
-import GitHubIcon from '@mui/icons-material/GitHub';
 import ProjectsCardsList from "../../components/ProjectsCardsList/ProjectsCardsList";
 
 const Home = (): JSX.Element => {
