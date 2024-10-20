@@ -42,6 +42,7 @@
     height: 100%;
     object-fit: cover;
     border-radius: 12px;
+    overflow: auto;
 }
 
 .projectCard > h3 {
