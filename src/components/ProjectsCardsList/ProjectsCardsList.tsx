@@ -99,7 +99,7 @@ const ProjectsCardsList = (): JSX.Element => {
         <div id={styles.projectsList}>
         {
             cards.map((card, index) =>
-                <>
+                <div key={index}>
                 <ProjectCard
                     imageUrl={card.imageUrl}
                     title={card.title}
@@ -109,7 +109,7 @@ const ProjectsCardsList = (): JSX.Element => {
                     invertColumns={index % 2 === 0}
                 />
                 <hr />
-                </>
+                </div>
             )
         }
         </div>
