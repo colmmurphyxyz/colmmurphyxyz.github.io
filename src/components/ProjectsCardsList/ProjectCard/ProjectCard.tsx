@@ -16,7 +16,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({imageUrl, title, descri
         <div className={styles.projectCard + (invertColumns ? ' ' + styles.columnsInverted : '')}>
             <img src={imageUrl} alt=""/>
             <h3> {title} </h3>
-            <p> {description}</p>
+            <p dangerouslySetInnerHTML={{ __html: description }}></p>
             <ul id={styles.cardDescription}>
                 {
                     bulletPoints.map(point => 

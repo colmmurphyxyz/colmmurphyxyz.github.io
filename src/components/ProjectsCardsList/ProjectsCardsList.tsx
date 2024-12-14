@@ -4,6 +4,24 @@ import styles from "./ProjectsCardsList.module.css"
 const ProjectsCardsList = (): JSX.Element => {
     const cards: ProjectCardProps[] = [
         {
+            imageUrl: "/img/pcc_example.png",
+            title: "Pseudo-Code Compiler",
+            description: "My Final-Year Project is to develop a runtime environment for pseudocode, as defined in " +
+                "<a href=\"https://mitpress.mit.edu/9780262046305/introduction-to-algorithms/\">Introduction To Algorithms</a> " +
+                "by <em>Thomas H. Cormen, Charles E. Leiserson, Ronald L. Rivest</em> and <i>Clifford Stein</i>.",
+            bulletPoints: [
+                "Tokenises, parses, transpiles pseudocode to executable Python code",
+                "Accompanied with a standard library with implementations of various data structures",
+            ],
+            actions: [
+                {
+                    imageUrl: "/img/github.svg",
+                    title: "Source Code",
+                    destinationUrl: "https://github.com/colmmurphyxyz/pcc",
+                },
+            ]
+        },
+        {
             imageUrl: "/img/sandsoforisis.png",
             title: "Sands of Orisis",
             description: "A top-down Real Time Strategy game developed in Godot 4 for a university group project",
@@ -75,8 +93,7 @@ const ProjectsCardsList = (): JSX.Element => {
                     destinationUrl: "https://github.com/colmmurphyxyz/cs3500-team36-client",
                 },
             ]
-        }
-        
+        },
     ]
     return (
         <div id={styles.projectsList}>
