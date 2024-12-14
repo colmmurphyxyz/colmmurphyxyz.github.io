@@ -19,8 +19,8 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({imageUrl, title, descri
             <p> {description}</p>
             <ul id={styles.cardDescription}>
                 {
-                    bulletPoints.map(point => 
-                        <li>
+                    bulletPoints.map((point, index) => 
+                        <li key={index}>
                             {point}
                         </li>
                     )
@@ -28,9 +28,9 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({imageUrl, title, descri
             </ul>
             <ul id={styles.projectCardActions}>
             {
-                actions.map(action =>
-                    <li>
-                        <ProjectCardButton imageUrl={action.imageUrl} title={action.title} destinationUrl={action.destinationUrl} />
+                actions.map((action, index) =>
+                    <li key={index}>
+                        <ProjectCardButton key={index} imageUrl={action.imageUrl} title={action.title} destinationUrl={action.destinationUrl} />
                     </li>
                 )
             }
