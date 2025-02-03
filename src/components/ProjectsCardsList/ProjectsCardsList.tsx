@@ -17,7 +17,7 @@ const ProjectsCardsList = (): JSX.Element => {
                 {
                     imageUrl: "/img/github.svg",
                     title: "Source Code",
-                    destinationUrl: "https://github.com/colmmurphyxyz/pcc",
+                    destinationUrl: "https://github.com/colmmurphyxyz/pseudo-code-compiler",
                 },
             ]
         },
