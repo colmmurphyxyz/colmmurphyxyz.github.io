@@ -34,7 +34,9 @@ if [ "$create_venv" = "y" ]; then
 fi
 
 cd ../pcc/debugger/frontend;
-npm install;
+if command -v npm >/dev/null 2>&1; then
+    npm install
+fi
 
 read -p "Do you want to install the VScode extension for CLRS pseudocode? [Y/n]: " install_ext
 if [ "$install_ext" = "n" ]; then

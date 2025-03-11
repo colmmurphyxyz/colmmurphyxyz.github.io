@@ -43,7 +43,9 @@ if ($create_venv -eq "y") {
 
 # Install npm dependencies
 Set-Location pcc/debugger/frontend
-npm install
+if (Get-Command npm -ErrorAction SilentlyContinue) {
+    npm install
+}
 
 # Ask about VS Code extension installation
 $install_ext = Read-Host "Do you want to install the VScode extension for CLRS pseudocode? [Y/n]"
