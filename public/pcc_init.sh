@@ -47,5 +47,13 @@ else
     rm ~/.vscode/extensions/extensions.json;
 fi
 
-echo "Done"
+if [ "$create_venv" = "y" ]; then
+    . ./venv/bin/activate;
+    echo "re-activated venv";
+fi
+
+echo "Finished";
+echo "The glorious Pseudocode Compiler is installed";
+echo "Transpile your first pseudocode program with 'python pcc/pcc.py \path\to\program.pc'";
+
 exit 0

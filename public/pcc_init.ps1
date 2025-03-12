@@ -57,5 +57,12 @@ if ($install_ext -ne "n") {
     Write-Output "fine..."
 }
 
-Write-Output "Done"
+if ($create_venv -eq "y") {
+    Write-Output "Re-Activating venv"
+    .\venv\Scripts\Activate
+}
+
+Write-Output "Finished"
+Write-Output "The glorious Pseudocode Compiler is installed"
+Write-Output "Transpile your first pseudocode program with 'python pcc/pcc.py \path\to\program.pc'"
 exit 0
