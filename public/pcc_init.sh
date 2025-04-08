@@ -28,15 +28,7 @@ cd res
 chmod +x transpile_pc_examples.sh;
 ./transpile_pc_examples.sh;
 
-if [ "$create_venv" = "y" ]; then
-    deactivate;
-    echo "Virtual environment deactivated.";
-fi
-
-cd ../pcc/debugger/frontend;
-if command -v npm >/dev/null 2>&1; then
-    npm install
-fi
+cd ..;
 
 read -p "Do you want to install the VScode extension for CLRS pseudocode? [Y/n]: " install_ext
 if [ "$install_ext" = "n" ]; then
@@ -45,11 +37,6 @@ else
     git clone --depth=1 https://github.com/colmmurphyxyz/clrs-pseudocode-vscode.git;
     mv clrs-pseudocode-vscode ~/.vscode/extensions;
     rm ~/.vscode/extensions/extensions.json;
-fi
-
-if [ "$create_venv" = "y" ]; then
-    . ./venv/bin/activate;
-    echo "re-activated venv";
 fi
 
 echo "Finished";

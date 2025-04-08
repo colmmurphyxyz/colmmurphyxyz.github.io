@@ -34,18 +34,7 @@ Set-Location res
 wsl chmod +x transpile_pc_examples.sh
 wsl ./transpile_pc_examples.sh
 
-# Deactivate virtual environment if created
 Set-Location ..
-if ($create_venv -eq "y") {
-    deactivate
-    Write-Output "Virtual environment deactivated."
-}
-
-# Install npm dependencies
-Set-Location pcc/debugger/frontend
-if (Get-Command npm -ErrorAction SilentlyContinue) {
-    npm install
-}
 
 # Ask about VS Code extension installation
 $install_ext = Read-Host "Do you want to install the VScode extension for CLRS pseudocode? [Y/n]"
@@ -55,11 +44,6 @@ if ($install_ext -ne "n") {
     Remove-Item "$env:USERPROFILE\.vscode\extensions\extensions.json" -Force
 } else {
     Write-Output "fine..."
-}
-
-if ($create_venv -eq "y") {
-    Write-Output "Re-Activating venv"
-    .\venv\Scripts\Activate
 }
 
 Write-Output "Finished"
